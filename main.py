@@ -12,9 +12,7 @@ async def handler(event):
     try:
         if event.message.media.document.attributes[0].voice:
             await event.delete()
-            print(event.stringify())
-            print(event.message.peer_id.user_id)
-            await client.send_file(event.message.peer_id.user_id, 'C:/Users/Favoryt/Desktop/lol.jpg')
+
     except AttributeError:
         pass
 
